@@ -1,0 +1,22 @@
+name: swarm-data-science-lite # Env name; change as needed
+channels:
+- conda-forge
+- defaults
+dependencies:
+- python>=3.10 # Version 3.12 introduces breaking changes
+- pip # Python package installer
+- beautifulsoup4 # Screen scraper
+- jupyter # Jupyter components
+- jupyterlab # Jupyter in the browser
+- matplotlib # Data visualizations
+- numpy # Scientific computing
+- pandas # Dataframes
+- polars # Dataframes
+- pydantic # Data validation
+- pyyaml # Yaml parser
+- requests # HTTP
+- scipy # Math, science, and eng
+- scrapy # Web scraper
+- seaborn # Data visualizations
+- pip:
+  - -r requirements.txt

@@ -1,0 +1,36 @@
+name: swarm-data-science-full # Env name; change as needed
+channels:
+- conda-forge
+- defaults
+dependencies:
+- python>=3.10 # Version 3.12 introduces breaking changes
+- pip # Python package installer
+- beautifulsoup4 # Screen scraper
+- dask # Parallel data processing
+- eli5 # ML debugging
+- graphviz # Graph descriptions
+- huggingface_hub[cli,torch,tensorflow] # Hugging Face Hub interface
+- jupyter # Jupyter components
+- jupyterlab # Jupyter in the browser
+- keras # Deep learning
+- langchain # NLP tools
+- lightgbm # Gradient boosting
+- lxml # XML processor
+- matplotlib # Data visualizations
+- nltk # Natural Language Toolkit
+- numpy # Scientific computing
+- pandas # Dataframes
+- pillow # Image processing
+- polars # Dataframes
+- pydantic # Data validation
+- pytorch # Tensors
+- pyyaml # Yaml parser
+- requests # HTTP
+- scikit-learn # Machine learning
+- scikit-image # Image processing
+- scipy # Math, science, and eng
+- scrapy # Web scraper
+- tiktoken # BPE tokenizer
+- transformers<4.39 # Pre-trained model transformers
+- pip:
+  - -r requirements.txt
