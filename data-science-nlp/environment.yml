@@ -1,0 +1,32 @@
+name: swarm-data-science-nlp # Env name; change as needed
+channels:
+- conda-forge
+- defaults
+dependencies:
+- python>=3.11,<3.12 # Version 3.12 introduces breaking changes
+- pip # Python package installer
+- beautifulsoup4 # Screen scraper
+- huggingface_hub[cli,torch,tensorflow] # Hugging Face Hub interface
+- jupyter # Jupyter components
+- jupyterlab # Jupyter in the browser
+- matplotlib # Data visualizations
+- keras # Deep learning
+- langchain # NLP tools
+- nltk # Natural Language Toolkit
+- numpy # Scientific computing
+- pandas # Dataframes
+- polars # Dataframes
+- pydantic # Data validation
+- pypdf # PDF processor
+- pytorch # Tensors
+- pyyaml # Yaml parser
+- rapidocr-onnxruntime # OCR
+- requests # HTTP
+- scipy # Math, science, and eng
+- scrapy # Web scraper
+- seaborn # Data visualizations
+- sentence-transformers # Sentence embeddings
+- tiktoken # BPE tokenizer
+- transformers<4.39 # Pre-trained model transformers
+- pip:
+  - -r requirements.txt
