@@ -1,5 +1,5 @@
-# Use the latest version of the pangeo/base-notebook (includes CUDA support)
-FROM pangeo/base-notebook:latest
+# Use the latest version of the pangeo/pytorch-notebook (optimized for PyTorch, includes CUDA support)
+FROM pangeo/pytorch-notebook:latest
 
 # Set the user to root
 USER root

@@ -3,7 +3,7 @@ channels:
 - conda-forge
 - defaults
 dependencies:
-- python>=3.10 # Version 3.12 introduces breaking changes
+- python>=3.11,<3.12 # Version 3.12 introduces breaking changes
 - pip # Python package installer
 - beautifulsoup4 # Screen scraper
 - jupyter # Jupyter components

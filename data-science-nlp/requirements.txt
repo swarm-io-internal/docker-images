@@ -1,2 +1,9 @@
-qdrant-client # Vector store
+# Use this for packages that you can't find on conda-forge (https://anaconda.org/)
+
+# Packages without a version specification (resolved by conda)
+polyglot # NLP
 pymilvus # Vector store
+qdrant-client # Vector store
+rapidocr-onnxruntime # OCR
+
+# Packages with a version specification

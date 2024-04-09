@@ -6,6 +6,9 @@ dependencies:
 - python>=3.11,<3.12 # Version 3.12 introduces breaking changes
 - pip # Python package installer
 - beautifulsoup4 # Screen scraper
+- gensim # Topic modeling
+- gradio # Web app framework
+- haystack-ai # NLP tools
 - huggingface_hub[cli,torch,tensorflow] # Hugging Face Hub interface
 - jupyter # Jupyter components
 - jupyterlab # Jupyter in the browser
@@ -15,18 +18,22 @@ dependencies:
 - nltk # Natural Language Toolkit
 - numpy # Scientific computing
 - pandas # Dataframes
+- pattern # Web mining
 - polars # Dataframes
 - pydantic # Data validation
 - pypdf # PDF processor
-- pytorch # Tensors
 - pyyaml # Yaml parser
-- rapidocr-onnxruntime # OCR
 - requests # HTTP
 - scipy # Math, science, and eng
 - scrapy # Web scraper
 - seaborn # Data visualizations
 - sentence-transformers # Sentence embeddings
+- spacy # NLP tools
+- streamlit # Web app framework
+- tensorflow # Deep learning
+- textblob # Text processing
 - tiktoken # BPE tokenizer
 - transformers<4.39 # Pre-trained model transformers
+- unstructured # NLP tools
 - pip:
   - -r requirements.txt

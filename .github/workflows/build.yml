@@ -24,7 +24,7 @@ jobs:
       strategy:
         fail-fast: false
         matrix:
-          IMAGE: [data-science-full,data-science-lite]
+          IMAGE: [data-science-full,data-science-lite,data-science-nlp]
       steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
