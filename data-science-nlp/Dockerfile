@@ -1,5 +1,5 @@
-# Use the latest version of the pangeo/pytorch-notebook (optimized for PyTorch, includes CUDA support)
-FROM pangeo/pytorch-notebook:latest
+# Use the latest version of the PyTorch docker image (includes Conda and CUDA support)
+FROM ghcr.io/pytorch/pytorch-nightly:latest
 
 # Set the user to root
 USER root
