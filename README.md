@@ -34,11 +34,25 @@ build | This workflow is responsible for building the Docker images and pushing 
 
 ## Usage
 
+### Pulling a Docker image
+
 To use the Docker images, you can pull them from the GitHub Container Registry. For example, to pull the `data-science-full` image, you can run:
 
 ```bash
 docker pull ghcr.io/swarm-io-internal/data-science-full:latest
 ```
+
+### Running a Docker Container
+
+Use the following command to run a Docker container:
+
+```bash
+docker run -it -p 8888:8888 ghcr.io/swarm-io-internal/data-science-full:latest
+```
+
+> Note: This command runs a CPU-only implementation of the Docker container, so you will NOT have access to any GPU resources. For GPU access within the container, you should update the command to `docker run --gpus all -it -p 8888:8888 ghcr.io/pytorch/pytorch-nightly:latest`.
+
+### Docker images in Workflows
 
 To use the images in your GitHub Actions workflows, you can reference the images directly in your workflow files. For example, to use the `data-science-full` image in your workflow, you can add the following step:
 
