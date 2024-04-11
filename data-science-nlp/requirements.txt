@@ -1,9 +1,9 @@
 # Use this for packages that you can't find on conda-forge (https://anaconda.org/)
 
-# Packages without a version specification (resolved by conda)
-polyglot # NLP
+# Packages without a version specification (resolved by pip)
+polyglot # NLP tool
 pymilvus # Vector store
 qdrant-client # Vector store
 rapidocr-onnxruntime # OCR
 
-# Packages with a version specification
+# Packages with specifications

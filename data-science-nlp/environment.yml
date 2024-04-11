@@ -36,4 +36,5 @@ dependencies:
 - transformers<4.39 # Pre-trained model transformers
 - unstructured # NLP tools
 - pip:
+  - --pre torch --index-url https://download.pytorch.org/whl/nightly/cu117
   - -r requirements.txt
