@@ -1,6 +1,5 @@
 # Use the latest version of the pangeo/base-image
-ARG PANGEO_BASE_IMAGE_TAG=master
-FROM pangeo/base-image:${PANGEO_BASE_IMAGE_TAG}
+FROM pangeo/base-notebook:${PANGEO_BASE_IMAGE_TAG}
 
 # Set the user to root
 USER root
@@ -21,3 +20,6 @@ RUN apt-get update && apt-get install -y \
     curl \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+# Run the post build script
+RUN /bin/bash /tmp/postBuild.sh
