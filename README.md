@@ -39,18 +39,21 @@ build | This workflow is responsible for building the Docker images and pushing 
 To use the Docker images, you can pull them from the GitHub Container Registry. For example, to pull the `data-science-full` image, you can run:
 
 ```bash
-docker pull ghcr.io/swarm-io-internal/data-science-full:latest
+docker pull --platform linux/x86_64 ghcr.io/swarm-io-internal/data-science-full:latest
 ```
+
+> Pro Tip: You MUST include the `--platform linux/x86_64` flag if you are running an Apple Silicon Mac. Otherwise, you will get a `no matching manifest for linux/arm64/v8 in the manifest list entries` error.
 
 ### Running a Docker Container
 
 Use the following command to run a Docker container:
 
 ```bash
-docker run -it -p 8888:8888 ghcr.io/swarm-io-internal/data-science-full:latest
+docker run -it --platform linux/x86_64 -p 8888:8888 ghcr.io/swarm-io-internal/data-science-full:latest bash
 ```
 
-> Note: This command runs a CPU-only implementation of the Docker container, so you will NOT have access to any GPU resources. For GPU access within the container, you should update the command to `docker run --gpus all -it -p 8888:8888 ghcr.io/pytorch/pytorch-nightly:latest`.
+> Note: This command runs a CPU-only implementation of the Docker container, so you will NOT have access to any GPU resources. For GPU access (Nvidia CUDA-only) within the container, you should update the command to `docker run --gpus all --platform linux/x86_64 -it -p 8888:8888 ghcr.io/swarm-io-internal/data-science-full:latest`.
+> Note: Once again, you MUST include the `--platform linux/x86_64` flag, or you will get a `docker: no matching manifest for linux/arm64/v8 in the manifest list entries.` error.
 
 ### Docker images in Workflows
 
