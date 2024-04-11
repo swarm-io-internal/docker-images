@@ -1,5 +1,5 @@
 # Use the latest version of the pangeo/base-image
-FROM pangeo/base-notebook:${PANGEO_BASE_IMAGE_TAG}
+FROM pangeo/base-notebook:latest
 
 # Set the user to root
 USER root
