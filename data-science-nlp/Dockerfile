@@ -1,5 +1,6 @@
-# Use the latest version of the PyTorch docker image (includes Conda and CUDA support)
-FROM ghcr.io/pytorch/pytorch-nightly:latest
+# Use the latest version of the pangeo/base-image
+ARG PANGEO_BASE_IMAGE_TAG=master
+FROM pangeo/base-image:${PANGEO_BASE_IMAGE_TAG}
 
 # Set the user to root
 USER root
@@ -7,6 +8,7 @@ USER root
 # Copy the environment and requirements files into the Docker image
 COPY environment.yml /tmp/environment.yml
 COPY requirements.txt /tmp/requirements.txt
+COPY postBuild.sh /tmp/postBuild.sh
 
 # Create a new Conda environment from the environment.yml file
 RUN conda env create -f /tmp/environment.yml
