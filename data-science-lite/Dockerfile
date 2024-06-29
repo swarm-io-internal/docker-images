@@ -1,5 +1,5 @@
 # Use the latest version of the pangeo/base-notebook (includes CUDA support)
-FROM uw-ssec/base-image:latest
+FROM pangeo/base-notebook:latest
 
 # Set the user to root
 USER root
